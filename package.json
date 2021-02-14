@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/kauefr/webdev-study/issues"
   },
-  "homepage": "https://github.com/kauefr/webdev-study#readme"
+  "homepage": "https://github.com/kauefr/webdev-study#readme",
+  "devDependencies": {
+    "rollup": "^2.39.0"
+  }
 }

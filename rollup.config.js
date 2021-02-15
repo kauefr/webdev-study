@@ -1,7 +1,7 @@
 import { nodeResolve } from '@rollup/plugin-node-resolve'
 import commonjs from '@rollup/plugin-commonjs'
 import { terser } from 'rollup-plugin-terser'
-import postcss from 'rollup-plugin-postcss'
+import babel from '@rollup/plugin-babel'
 
 export default {
     input: "src/main.js",
@@ -19,8 +19,6 @@ export default {
     plugins: [
         nodeResolve(),
         commonjs(),
-        postcss({
-            modules: true
-        })
+        babel({ babelHelpers: 'bundled' })
     ]
 }

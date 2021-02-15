@@ -1,5 +1,8 @@
-import astyles from './a.css'
-import bstyles from './b.css'
+//import { asdf } from './other'
 
-
-console.log('' + astyles + '\n' + bstyles);
+const PI = 3.141593;
+console.log(PI);
+var a = () => "asdfasdf";
+console.log(a());
+console.log("hello".startsWith("ello", 1))
+//asdf();

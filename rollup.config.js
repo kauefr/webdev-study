@@ -4,7 +4,7 @@ import { terser } from 'rollup-plugin-terser'
 import babel from '@rollup/plugin-babel'
 
 export default {
-    input: "src/main.js",
+    input: "src/main.jsx",
     output: [{
         file: "dist/bundle.js",
         format: "umd",

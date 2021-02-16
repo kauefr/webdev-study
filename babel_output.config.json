@@ -1,0 +1,14 @@
+{
+    "presets": [
+        "@babel/preset-react",
+        [
+            "@babel/preset-env",
+            {
+                "modules": "umd",
+                "useBuiltIns": "usage",
+                "corejs": "3.8",
+                "targets": "chrome >= 87"
+            }
+        ]
+    ]
+}

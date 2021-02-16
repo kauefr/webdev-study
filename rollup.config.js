@@ -1,19 +1,21 @@
 import { nodeResolve } from '@rollup/plugin-node-resolve'
 import commonjs from '@rollup/plugin-commonjs'
 import { terser } from 'rollup-plugin-terser'
-import babel from '@rollup/plugin-babel'
+import babel, { getBabelOutputPlugin } from '@rollup/plugin-babel'
+import path from 'path'
 
 export default {
     input: "src/main.jsx",
     output: [{
         file: "dist/bundle.js",
-        format: "umd",
-        name: "WebdevStudy"
+        format: "esm",
+        name: "WebdevStudy",
+        plugins: [getBabelOutputPlugin({ configFile: path.resolve(__dirname, 'babel_output.config.json') })]
     }, {
         file: "dist/bundle.min.js",
-        format: "umd",
+        format: "esm",
         name: "WebdevStudy",
-        plugins: [terser()]
+        plugins: [getBabelOutputPlugin({ configFile: path.resolve(__dirname, 'babel_output.config.json') }), terser()]
     }
     ],
     plugins: [
